@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      color: #1f2937;
+      background: #f9fafb;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+</body>
+</html>
